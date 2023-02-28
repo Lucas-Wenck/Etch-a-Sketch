@@ -26,12 +26,12 @@ function click(){
     grid.setAttribute('id', 'grid');
     let columns = Number(prompt(`How many columns should the grid have?`, `16`));
     if(columns > 100){
-        window.alert('Thats to big, please choose between 1 and 100. I am going to put this value at 16 ok?')
+        window.alert('Thats too big, please choose between 1 and 100. I am going to put this value at 16 ok?')
         columns = 16;
     }
     let rows = Number(prompt(`how many rows should the grid have?`, `16`));
     if(rows > 100){
-        window.alert('Thats to big, please choose between 1 and 100. I am going to put this value at 16 ok?')
+        window.alert('Thats too big, please choose between 1 and 100. I am going to put this value at 16 ok?')
         rows = 16;
     }
         for(let i = 0; i < columns; i++){
@@ -55,7 +55,7 @@ proportions.addEventListener('click', () => {
 })
 let randColor;
 function generateRandomColor(){
-    let maxVal = 0xFFFFFF; // 16777215
+    let maxVal = 0xFFFFFF;
     let randomNumber = Math.random() * maxVal; 
     randomNumber = Math.floor(randomNumber);
     randomNumber = randomNumber.toString(16);
