@@ -17,12 +17,7 @@ function baseGrid(){
         grid.appendChild(column);
     }
     document.body.appendChild(grid);
-    const hover = document.querySelectorAll('.row');
-    hover.forEach(row => {
-    row.addEventListener('mouseover', function backgroundChange(event){
-        row.style.backgroundColor = 'black';
-        })
-    })
+
 }
 baseGrid()
 function click(){
@@ -43,15 +38,30 @@ function click(){
         grid.appendChild(column);
     }
     document.body.appendChild(grid);
+
+}
+
+const proportions = document.getElementById('proportions');
+proportions.addEventListener('click', () => {
+    click();
+})
+
+const pencil = document.getElementById('pencil');
+pencil.addEventListener('click', () => {
     const hover = document.querySelectorAll('.row');
     hover.forEach(row => {
     row.addEventListener('mouseover', function backgroundChange(event){
         row.style.backgroundColor = 'black';
         })
     })
-}
+})
 
-const proportions = document.getElementById('proportions')
-proportions.addEventListener('click', () => {
-    click();
+const eraser = document.getElementById('eraser');
+eraser.addEventListener('click', () => {
+    const hover = document.querySelectorAll('.row');
+    hover.forEach(row => {
+    row.addEventListener('mouseover', function backgroundChange(event){
+        row.style.backgroundColor = 'white';
+        })
+    })
 })

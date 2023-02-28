@@ -8,6 +8,7 @@ body{
     margin: auto;
     flex-wrap: wrap;
     text-align: center;
+    background-color: #D3D3D3;
 }
 #grid{
     display: flex;
@@ -29,6 +30,5 @@ button{
     margin-top: 24px;
     margin-bottom: 24px;
     text-align: center;
-    background-color: aqua;
     border-radius: 1.5%;
 }
