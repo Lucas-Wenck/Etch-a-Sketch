@@ -8,21 +8,15 @@ body{
     margin: auto;
 }
 #grid{
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
     width: 960px;
-    height: 100vh;
-    border: solid red;
 }
 .column{
-    flex-grow: 1;
-    background-color: aqua;
-    border: solid 1px red;
+    flex: 1;
+    background-color: black;
 }
 .row{
     margin: 1px;
-    background: black;
-    flex-grow: 1 0;
-    border: solid 1px black;
-    align-self: stretch;
+    background-color: white;
+    aspect-ratio: 1 / 1;
 }
