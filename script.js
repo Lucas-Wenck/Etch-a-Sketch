@@ -9,6 +9,7 @@ for(let i = 0; i < columns; i++){
     for(let j = 0; j < rows; j++){
         let row = document.createElement('div');
         row.className = 'row';
+        row.textContent = i + '-' +j;
         column.appendChild(row);
     }
     grid.appendChild(column);
