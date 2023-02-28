@@ -22,3 +22,17 @@ hover.forEach(row => {
         row.style.backgroundColor = 'black';
     })
 })
+
+const row_number = document.getElementById('row-number');
+for(let m = 16; m <= 100; m++){
+    let rowOptions = document.createElement('option');
+    rowOptions.text = `${m}`;
+    row_number.add(rowOptions);
+}
+
+const column_number = document.getElementById('column-number');
+for(let n = 16; n <= 100; n++){
+    let colOptions = document.createElement('option');
+    colOptions.text = `${n}`;
+    column_number.add(colOptions);
+}
