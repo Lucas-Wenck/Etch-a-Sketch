@@ -25,7 +25,15 @@ function click(){
     grid = document.createElement('div');
     grid.setAttribute('id', 'grid');
     let columns = Number(prompt(`How many columns should the grid have?`, `16`));
+    if(columns > 100){
+        window.alert('Thats to big, please choose between 1 and 100. I am going to put this value at 16 ok?')
+        columns = 16;
+    }
     let rows = Number(prompt(`how many rows should the grid have?`, `16`));
+    if(rows > 100){
+        window.alert('Thats to big, please choose between 1 and 100. I am going to put this value at 16 ok?')
+        rows = 16;
+    }
         for(let i = 0; i < columns; i++){
         let column = document.createElement('div');
         column.className = 'column';
