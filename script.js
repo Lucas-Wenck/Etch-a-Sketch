@@ -53,13 +53,23 @@ const proportions = document.getElementById('proportions');
 proportions.addEventListener('click', () => {
     click();
 })
+let randColor;
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
+}
 
 const pencil = document.getElementById('pencil');
 pencil.addEventListener('click', () => {
+    generateRandomColor();
     const hover = document.querySelectorAll('.row');
     hover.forEach(row => {
     row.addEventListener('mouseover', function backgroundChange(event){
-        row.style.backgroundColor = 'black';
+        row.style.backgroundColor = `#${randColor.toUpperCase()}`;
         })
     })
 })
